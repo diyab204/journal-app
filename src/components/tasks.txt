@@ -1,0 +1,4 @@
+dexie db connect
+file containing functions like createJournal, deleteJournal, update, listJournal, getJournalById
+
+onsubmit( create(data))
