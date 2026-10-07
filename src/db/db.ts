@@ -1,6 +1,5 @@
 
 import Dexie, { type Table } from "dexie";
-import { journals } from "../data/journals";
 
 export interface Journal {
   id?: number;
@@ -36,4 +35,8 @@ export async function createJournal(newData : Journal){
 
 export async function deleteJournal(id : number){
   await db.journals.delete(id);
+}
+
+export async function getJournalById(id: number): Promise<Journal | undefined> {
+  return await db.journals.get(id);
 }
